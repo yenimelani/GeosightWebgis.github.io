@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" cont="width=device-width, initial-scale=1.0">
+  <title>Halaman Utama WEB GIS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      
+      background-size: cover;
+      background-position: center;
+    }
+    
+    h2 {
+      margin: 0;
+      font-size: 80px;
+    }
+    
+    section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+    }
+
+    /* Latar belakang untuk section pertama */
+    .section1 {
+      background-image: url('bg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Latar belakang untuk section kedua */
+    .section2 {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .header {
+      background-color:  #0badf3;
+      padding: 40px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        text-align: center;
+    }
+    
+    .content {
+      text-align: center;
+    }
+
+    .Conten {
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .cont {
+      text-align: center;
+    }
+
+    .Con {
+        text-align: center;
+        font-size: 13px;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    .pencet {
+            display: inline-block;
+            background-color: #0badf3;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+    .pen {
+        position: absolute;
+        top: 200px;
+        right: 700px;
+    }
+
+    .pencet {
+        background-color: #0badf3;
+    }
+
+    /*webgis*/
+    .gis {
+        position: absolute;
+        top: 30px;
+        right: 50px;
+    }
+
+    /*Home*/
+    .home {
+        position: absolute;
+        top: 30px;
+        right: 400px;
+    }
+
+    /*Home Text*/
+    .home-text {
+        display: inline-block;
+        vertical-align: middle;
+        color: #ffffff;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /* Profile Text */
+    .gis-text {
+      display: inline-block;
+      vertical-align: middle;
+      color: #ffffff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .Anggota {
+      display: inline-block;
+      vertical-align: middle;
+      color: #000000;
+      font-weight: none;
+      cursor: pointer;
+    }
+
+    .Mangrove {
+        display: inline-block;
+        vertical-align: middle;
+        color: #000000;
+        font-weight: none;
+        cursor: pointer;
+    }
+
+    .Home {
+      display: inline-block;
+      vertical-align: middle;
+      color: #000000;
+      font-weight: none;
+      cursor: pointer;
+    }
+
+    
+    /* Profile Menu */
+    .profile-menu {
+      position: absolute;
+      top: 30px;
+      right: 150px;
+    }
+    
+    .profile-menu-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 160px;
+      box-shadow: 0 2px 5px rgba(185, 13, 13, 0.2);
+      z-index: 1;
+      padding: 8px;
+      border-radius: 4px;
+      left: -100%; /* Tambahkan ini untuk menggeser popup ke kiri */
+      text-align: left; /* Tambahkan ini untuk menjaga teks kiri pada popup */
+    }
+    
+    .profile-menu:hover .profile-menu-content {
+      display: block;
+    }
+    
+    .profile-menu-item {
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+    
+    .profile-menu-item:hover {
+      background-color: #f2f2f2;
+    }
+    
+    /* Profile Text */
+    .profile-text {
+      display: inline-block;
+      vertical-align: middle;
+      color: #ffffff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Deskripsi Menu */
+    .deskripsi-menu {
+      position: absolute;
+      top: 30px;
+      right: 250px;
+    }
+    
+    .deskripsi-menu-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 160px;
+      box-shadow: 0 2px 5px rgba(185, 13, 13, 0.2);
+      z-index: 1;
+      padding: 8px;
+      border-radius: 4px;
+      left: -100%; /* Tambahkan ini untuk menggeser popup ke kiri */
+      text-align: left; /* Tambahkan ini untuk menjaga teks kiri pada popup */
+    }
+
+    .deskripsi-menu:hover .deskripsi-menu-content {
+      display: block;
+    }
+
+    .deskripsi-menu-item {
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    .deskripsi-menu-item:hover {
+      background-color: #f2f2f2;
+    }
+
+    /* deskripsi Text */
+    .deskripsi-text {
+      display: inline-block;
+      vertical-align: middle;
+      color: #ffffff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .Upi-container {
+        position: absolute;
+        top: 25px;
+        left: 82px;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .logo-teks {
+        font-size: 13px;
+        font-weight: none;
+        color: #ffffff;
+    }
+
+    .teks-container {
+        position: absolute;
+        top: 52px;
+        left: 82px;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-teks {
+        font-size: 9px;
+        font-weight: none;
+        color: #ffffff;
+    }
+
+    .logo-container {
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        width: 65px;
+        height: 50px;
+        margin-right: 80px;
+    }
+
+    .logo-text {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+        
+    /* Hapus warna biru pada teks "WEBGIS" */
+    .gis-text a,
+    .home-text a,
+    .Deskripsi a,
+    .Anggota a,
+    .Home a,
+    .Mangrove a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .con {
+        position: absolute;
+        top: 750px;
+        left: 15px;
+        text-align: justify;
+        margin: 0 20px;
+    }
+    
+  </style>
+</head>
+
+<body>
+    <div class="header"></div>
+    <div class="logo-container">
+        <img src="foto/logo.png" alt="Logo UPI" class="logo">
+    </div>
+    <div class="teks-container">
+        <span class="logo-teks">Universitas Pendidikan Indonesia</span>
+    </div>
+    <div class="Upi-container">
+        <span class="logo-text">UPI</span>
+    </div>
+  <header>
+    <h1></h1>
+  </header>
+
+  <section class="section1">
+    <div class="container">
+        <h2>WebGIS!</h2>
+    </div>
+    <div class="con"></div>
+    <div class="cont">
+      <div class="deskripsi-menu">
+        <span class="deskripsi-text">DESCRIPTION</span>
+        <span class="deskripsi-menu-content">
+          <div class="deskripsi-menu-item">
+            <span class="Mangrove"><a href="Mangrove.html" class="button">Mangrove</a></span>
+          </div>
+          <div class="deskripsi-menu-item">
+            <span class="Mangrove"><a href="Wisata.html" class="button">Wisata</a></span>
+          </div>
+          <div class="deskripsi-menu-item">
+            <span class="Mangrove"><a href="ppn.html" class="button">Pelabuhan</a></span>
+          </div>
+          <div class="deskripsi-menu-item">
+            <span class="Mangrove"><a href="ikan.html" class="button">Pasar Ikan</a></span>
+          </div>
+        </span>
+      </div>
+    </div>
+    <div class="conten"></div>
+    <div class="content">
+      <div class="profile-menu">
+        <span class="profile-text">PROFIL</span>
+        <span class="profile-menu-content">
+          <div class="profile-menu-item">
+            <span class="Anggota"><a href="Anggota.html" class="button">Person</a></span>
+          </div>
+          <div class="profile-menu-item">
+            <span class="Home"><a href="Contact.html" class="button">Contact Us</a></span>
+          </div>
+        </span>
+      </div>
+    </div>
+    <div class="gis">
+        <span class="gis-text"><a href="webgis.html" class="button">WEBGIS</a></span>
+    </div>
+    <div class="home">
+      <span class="home-text"><a href="awal.html" class="button">HOME</a></span>
+    </div>
+  </section>
+
+  <section class="section2">
+    <div class="con">
+      <span style="color: rgb(75, 75, 75);"><b>Website Geografi Informasi System ( WEBGIS )</b>
+        <P>Menurut Prahasta (2007), WebGIS adalah aplikasi GIS atau pemetaan digital yang memanfaatkan jaringan internet sebagai media komunikasi yang berfungsi mendistribusikan, mempublikasikan, mengintegrasikan, mengkomunikasikan dan menyediakan informasi dalam bentuk teks, peta dijital serta menjalankan fungsi–fungsi analisis dan query yang terkait dengan GIS melalui jaringan internet.</P>
+        <p>Sedangkan menurut Setiawan dan Rabbasa, penggunaan data spasial dirasakan semakin diperlukan untuk berbagai keperluan seperti penelitian, pengembangan dan perencanaan wilayah, serta manajemen sumber daya alam. Pengguna data spasial merasakan minimnya informasi mengenai keberadaan dan ketersediaan data spasial yang dibutuhkan. Penyebaran (diseminasi) data spasial yang selama ini dilakukan dengan menggunakan media yang telah ada yang meliputi media cetak (peta), cd-rom, dan media penyimpanan lainnya dirasakan kurang mencukupi kebutuhan pengguna. Pengguna diharuskan datang dan melihat langsung data tersebut pada tempatnya (data provider). Hal ini mengurangi mobilitas dan kecepatan dalam memperoleh informasi mengenai data tersebut. Karena itu dirasakan perlu adanya WebGIS.</p>
+        <p></p>
+        </span>
+      <div class="pen">
+        <span class=""><a href="index.html" class="pencet">Buka</a></span>
+    </div>
+  </section>
+</body>
+</html>
